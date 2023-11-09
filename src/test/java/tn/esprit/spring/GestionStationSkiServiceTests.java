@@ -36,13 +36,13 @@ class GestionStationSkiServiceTests {
         piste.setNumPiste(1L);
         piste.setNamePiste("Test Piste");
 
-        // Mock the behavior of the productRepository
+        // Mock the behavior of the pisteRepository
         Mockito.when(pisteRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(piste));
 
         // Call the method to be tested
-        Piste retrievedProduct = pisteServices.retrievePiste(1L);
+        Piste retrievePiste = pisteServices.retrievePiste(1L);
 
-        Assertions.assertNotNull(retrievedProduct);
-        Assertions.assertEquals("Test Piste", retrievedProduct.getNamePiste());
+        Assertions.assertNotNull(retrievePiste);
+        Assertions.assertEquals("Test Piste", retrievePiste.getNamePiste());
     }
 }
