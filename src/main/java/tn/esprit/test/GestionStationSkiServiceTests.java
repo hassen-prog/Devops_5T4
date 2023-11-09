@@ -1,4 +1,4 @@
-package tn.esprit.spring;
+package tn.esprit.test;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -8,6 +8,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
+import tn.esprit.spring.GestionStationSkiApplication;
 import tn.esprit.spring.entities.Piste;
 import tn.esprit.spring.repositories.IPisteRepository;
 import tn.esprit.spring.services.PisteServicesImpl;
@@ -15,7 +16,7 @@ import tn.esprit.spring.services.PisteServicesImpl;
 
 import java.util.Optional;
 
-@SpringBootTest
+@SpringBootTest(classes = GestionStationSkiApplication.class)
 class GestionStationSkiServiceTests {
 
     @Mock
